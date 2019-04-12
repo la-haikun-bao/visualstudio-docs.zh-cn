@@ -35,7 +35,7 @@ Visual Studio 使用 [.NET Framework 正则表达式](/dotnet/standard/base-type
 
 ## <a name="regular-expression-examples"></a>正则表达式示例
 
-下面是一些可能的恶意活动：
+下面是一些例子：
 
 |目标|表达式|示例|
 |-------------|----------------|-------------|
@@ -44,7 +44,7 @@ Visual Studio 使用 [.NET Framework 正则表达式](/dotnet/standard/base-type
 |零次或多次匹配任何字符（通配符 *）|.*|`c.*e` 匹配“racket”中的“cke”，“comment”中的“comme”和“code”中的“code”|
 |一次或多次匹配前面的表达式（匹配尽可能多的字符）|+|`e.+d` 匹配“feeder”中的“eed”，而不是“ed”。|
 |一次或多次匹配任意字符（通配符 ?）|.+|`e.+e` 匹配“feeder”中的“eede”，而不是“ee”。|
-|零次或多次匹配前面的表达式（匹配尽可能多的字符）|*?|`e.*?e` 匹配“feeder”中的“ee”，而不是“eede”。|
+|零次或多次匹配前面的表达式（匹配尽可能少的字符）|*?|`e.*?e` 匹配“feeder”中的“ee”，而不是“eede”。|
 |一次或多次匹配前面的表达式（匹配尽可能多的字符）|+?|`e.+?e` 匹配“enterprise”中的“ente”和“erprise”，但不匹配整个单词“enterprise”。|
 |将匹配字符串定位到行或字符串的开头|^|`^car` 仅在出现于行开头时才匹配单词“car”。|
 |将匹配字符串定位到行尾|\r?$|`end\r?$` 仅在出现于行尾时才匹配“end”。|
